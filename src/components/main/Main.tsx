@@ -1,7 +1,8 @@
 import * as React from "react";
 import {FunctionComponent, useEffect, useState} from "react";
 import {IDriver} from "../../redux/reducers/Drivers";
-
+import './main.scss'
+import {Driver} from "./driver/Driver.";
 interface IMainProps {
     drivers: IDriver[]
     fetchDrivers: () => void
@@ -9,13 +10,13 @@ interface IMainProps {
 
 export const Main: FunctionComponent<IMainProps> = (props) => {
     const [state, setState] = useState("");
-    useEffect(() => {
-            props.fetchDrivers()},
-        [])
+    useEffect(props.fetchDrivers, [])
 
     return (
-        <div className=''>
-
+        <div className='main-container'>
+            <div className="drivers-container">
+                {props.drivers.map((driver:IDriver)=><Driver driver={driver}/>)}
+            </div>
         </div>
     );
 }
