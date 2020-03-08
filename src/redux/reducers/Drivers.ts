@@ -11,15 +11,20 @@ export interface IDriver {
 
 export interface driverReducerState {
     drivers: IDriver[]
+    searchValue: string
 }
 
-const driverReducer = (state: driverReducerState = {drivers : []}, action) => {
+const driverReducer = (state: driverReducerState = {drivers: [], searchValue: ''}, action) => {
     switch (action.type) {
         case driversTypes.FETCH:
-            console.log(action.type)
             return {
                 ...state,
                 drivers: action.drivers
+            };
+        case driversTypes.SEARCH:
+            return {
+                ...state,
+                searchValue: action.searchValue
             };
 
         default:

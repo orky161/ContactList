@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {TopBar} from "./top_bar/TopBar";
+import TopBar from "./top_bar/TopBarContainer";
 import Main from "./main/MainContainer";
 import './App.scss'
 
