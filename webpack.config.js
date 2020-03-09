@@ -2,8 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-// Is the current build a development build
-
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'src');
 /**
@@ -22,7 +20,6 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: path.resolve(dirApp, 'assets', 'svg'), to: 'svg' }
     ])
-
   ],
   module: {
     rules: [

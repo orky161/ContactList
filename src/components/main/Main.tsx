@@ -10,12 +10,14 @@ interface IMainProps {
 }
 
 export const Main: FunctionComponent<IMainProps> = (props) => {
-    useEffect(()=>{props.fetchDrivers()}, []);
+    useEffect(() => {
+        props.fetchDrivers()
+    }, []);
 
     return (
         <div className='main-container'>
             <div className="drivers-container">
-                {props.drivers.map((driver: IDriver) => <Driver key={driver.phone+5} driver={driver}/>)}
+                {props.drivers.map((driver: IDriver) => <Driver key={driver.name} driver={driver}/>)}
             </div>
         </div>
     );

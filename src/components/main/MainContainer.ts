@@ -12,7 +12,7 @@ const mapStateToProps = (state: IReducers) => {
 
 const matchDispatchToProps = (dispatch) => {
     return {
-        fetchDrivers:()=> dispatch(fetchDriversAction())
+        fetchDrivers: ()=> dispatch(fetchDriversAction())
     }
 };
 
