@@ -1,9 +1,72 @@
-.driver-card{
+.driver-card {
+  padding: 15px 10px 6px 10px;
   border-radius: 3px;
-  margin: 10px;
-  height: 180px;
-  width: 150px;
+  height: 210px;
+  width: 160px;
   background: white;
   box-shadow: -1px 7px 41px -13px rgba(0, 0, 0, 0.75);
 
+  &:hover {
+    .driver-image-border {
+      height: 100px;
+    }
+
+    .phone {
+      display: block;
+    }
+
+    .email {
+      display: block;
+    }
+  }
+
+  .driver-image-border {
+    position: relative;
+    height: 140px;
+    margin-bottom: 25px;
+
+
+    .driver-image-padding {
+      overflow: hidden;
+      height: 100%;
+
+      .image {
+        height: 140px;
+        width: 135px;
+      }
+    }
+
+    .drive-type-icon {
+      position: absolute;
+      left: 10px;
+      bottom: -20px;
+    }
+
+  }
+
+  @mixin driver-texts($fontSize, $color) {
+    font-size: $fontSize;
+    color: $color;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .full-name {
+    @include driver-texts(1.1em, black);
+  }
+
+  .rank {
+    @include driver-texts(0.9em, #a7a7a7);
+  }
+
+  .phone {
+    @include driver-texts(0.9em, #a7a7a7);
+    display: none;
+  }
+
+  .email {
+    @include driver-texts(0.9em, #a7a7a7);
+    display: none;
+  }
 }

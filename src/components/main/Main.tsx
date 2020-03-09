@@ -15,7 +15,7 @@ export const Main: FunctionComponent<IMainProps> = (props) => {
     return (
         <div className='main-container'>
             <div className="drivers-container">
-                {props.drivers.map((driver: IDriver) => <Driver key={driver.email} driver={driver}/>)}
+                {props.drivers.map((driver: IDriver) => <Driver key={driver.phone+5} driver={driver}/>)}
             </div>
         </div>
     );
