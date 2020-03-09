@@ -1,5 +1,5 @@
 import * as React from "react";
-import {FunctionComponent, useState} from "react";
+import {FunctionComponent} from "react";
 import './TopBar.scss'
 
 interface ITopBarProps {
@@ -7,9 +7,11 @@ interface ITopBarProps {
 }
 
 export const TopBar: FunctionComponent<ITopBarProps> = (props) => {
+
     const handleSearchDrivers = (e) => {
         props.searchDrivers(e.target.value)
-    }
+    };
+
     return (
         <div className='top-bar-container'>
             <div className="title">Contact List</div>
@@ -18,4 +20,4 @@ export const TopBar: FunctionComponent<ITopBarProps> = (props) => {
             </div>
         </div>
     );
-}
+};
