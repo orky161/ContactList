@@ -1,6 +1,6 @@
 import {applyMiddleware, combineReducers, createStore, Reducer} from "redux";
 import thunk from "redux-thunk";
-import driverReducer, {driverReducerState, IDriver} from "./reducers/Drivers";
+import driverReducer, { driverReducerState } from "./reducers/Drivers";
 
 export interface IReducers {
     driversReducer: driverReducerState

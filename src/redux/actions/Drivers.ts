@@ -1,4 +1,3 @@
-import {Dispatch} from 'react';
 import {fetchDriversRequest} from "../../server_requests/Driver";
 
 export enum driversTypes {
@@ -15,6 +14,7 @@ export const fetchDriversAction = () => {
         });
     };
 };
+
 export const searchDriversAction = (value: string) => ({
     type: driversTypes.SEARCH,
     searchValue: value
