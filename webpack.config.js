@@ -1,11 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// Is the current build a development build
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'src');
-
 /**
  * Webpack Configuration
  */
@@ -18,13 +16,20 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(dirApp, 'index.ejs')
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: path.resolve(dirApp, 'assets', 'svg'), to: 'svg' }
+    ])
   ],
   module: {
     rules: [
       {
         test: /\.(tsx|ts)?$/,
         loader: 'awesome-typescript-loader'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       },
       {
         test: /\.(js|jsx)$/,
@@ -44,6 +49,10 @@ module.exports = {
             options: {}
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.ejs$/,

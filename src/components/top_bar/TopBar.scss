@@ -1,0 +1,40 @@
+.top-bar-container {
+  display: flex;
+  padding: 10px 50px;
+  background: #00c4ff;
+
+  .title {
+    font-size: 1.5em;
+    color: white;
+    margin-left: 20px;
+  }
+
+  .search-box {
+    position: relative;
+    margin-left: auto;
+    width: 23%;
+    min-width: 200px;
+
+    &:before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      font-size: 6px;
+      background: url(/svg/top_bar/search.svg) no-repeat 75% 40%;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-size: 20px 17px;
+    }
+
+    .search-input {
+      border-radius: 10px;
+      color: gray;
+      width: 100%;
+      height: 23px;
+      text-indent: 10px;
+      border: none;
+    }
+  }
+}

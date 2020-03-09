@@ -1,0 +1,12 @@
+.main-container {
+  padding: 5% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .drivers-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px
+  }
+}

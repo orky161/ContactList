@@ -1,0 +1,76 @@
+$imageHeight: 150px;
+$driverTypeIconSize: 40px;
+
+.driver-card {
+  padding: 15px 15px 6px 15px;
+  border-radius: 3px;
+  height: 220px;
+  width: 150px;
+  background: white;
+  box-shadow: -1px 0px 20px -15px rgba(0, 0, 0, 0.75);
+
+  &:hover {
+    .driver-image-border {
+      height: 100px;
+    }
+
+    .phone {
+      display: block;
+    }
+
+    .email {
+      display: block;
+    }
+  }
+
+  .driver-image-border {
+    position: relative;
+    height: $imageHeight;
+    margin-bottom: 25px;
+
+    .driver-image-padding {
+      overflow: hidden;
+      height: 100%;
+
+      .image {
+        height: $imageHeight;
+        width: 100%;
+      }
+    }
+
+    .drive-type-icon {
+      position: absolute;
+      height: $driverTypeIconSize;
+      left: 10px;
+      top: calc(100% - #{$driverTypeIconSize / 2});
+    }
+
+  }
+
+  @mixin driver-texts($fontSize, $color) {
+    font-size: $fontSize;
+    color: $color;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .full-name {
+    @include driver-texts(1.1em, #0000008a);
+    margin-bottom: 2px;
+  }
+
+  .rank {
+    @include driver-texts(0.9em, #a7a7a7);
+  }
+
+  .phone {
+    @include driver-texts(0.9em, #a7a7a7);
+    display: none;
+  }
+
+  .email {
+    @include driver-texts(0.9em, #a7a7a7);
+    display: none;
+  }
+}
