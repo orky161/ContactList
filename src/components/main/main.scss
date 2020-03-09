@@ -1,6 +1,5 @@
 .main-container {
-  padding-top: 5%;
-  background: #ebebeb;
+  padding: 5% 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,6 +7,6 @@
   .drivers-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px
+    grid-gap: 15px
   }
 }

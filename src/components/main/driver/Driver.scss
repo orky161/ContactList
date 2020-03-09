@@ -1,10 +1,13 @@
+$imageHeight: 150px;
+$driverTypeIconSize: 40px;
+
 .driver-card {
-  padding: 15px 10px 6px 10px;
+  padding: 15px 15px 6px 15px;
   border-radius: 3px;
-  height: 210px;
-  width: 160px;
+  height: 220px;
+  width: 150px;
   background: white;
-  box-shadow: -1px 7px 41px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 0px 20px -15px rgba(0, 0, 0, 0.75);
 
   &:hover {
     .driver-image-border {
@@ -22,24 +25,24 @@
 
   .driver-image-border {
     position: relative;
-    height: 140px;
+    height: $imageHeight;
     margin-bottom: 25px;
-
 
     .driver-image-padding {
       overflow: hidden;
       height: 100%;
 
       .image {
-        height: 140px;
-        width: 135px;
+        height: $imageHeight;
+        width: 100%;
       }
     }
 
     .drive-type-icon {
       position: absolute;
+      height: $driverTypeIconSize;
       left: 10px;
-      bottom: -20px;
+      top: calc(100% - #{$driverTypeIconSize / 2}) ;
     }
 
   }
