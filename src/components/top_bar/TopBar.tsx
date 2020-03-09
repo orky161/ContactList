@@ -3,13 +3,13 @@ import {FunctionComponent} from "react";
 import './TopBar.scss'
 
 interface ITopBarProps {
-    searchDrivers:(value:string)=>void
+    searchDrivers: (value:string) => void
 }
 
 export const TopBar: FunctionComponent<ITopBarProps> = (props) => {
 
     const handleSearchDrivers = (e) => {
-        props.searchDrivers(e.target.value)
+        props.searchDrivers(e.target.value);
     };
 
     return (

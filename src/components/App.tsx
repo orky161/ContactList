@@ -5,10 +5,10 @@ import './App.scss'
 
 export class App extends React.Component {
 
-  render() {
-    return <div>
-      <TopBar/>
-      <Main/>
-    </div>;
-  }
+    render() {
+        return <div>
+            <TopBar/>
+            <Main/>
+        </div>;
+    }
 }

@@ -1,17 +1,17 @@
 import {driversTypes} from "../actions/Drivers";
 
 export interface IDriver {
-    name: string
-    driverType: string,
-    driverRank: number
-    phone: string
-    email: string
-    profile_image: string
+    name: string;
+    driverType: string;
+    driverRank: number;
+    phone: string;
+    email: string;
+    profile_image: string;
 }
 
 export interface driverReducerState {
-    drivers: IDriver[]
-    searchValue: string
+    drivers: IDriver[];
+    searchValue: string;
 }
 
 const driverReducer = (state: driverReducerState = {drivers: [], searchValue: ''}, action) => {

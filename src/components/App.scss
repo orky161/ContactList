@@ -2,8 +2,9 @@ body {
   margin: 0;
   background-color: #f7f7f7;
 }
+
 input {
-  &:focus{
-    outline:none;
+  &:focus {
+    outline: none;
   }
 }
