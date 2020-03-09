@@ -11,11 +11,14 @@ export const Driver: FunctionComponent<IDriverProps> = (props) => {
     const {name, driverRank, profile_image, driverType, phone, email} = props.driver;
 
     const getDriverDetails = () => {
+        const driverPhone = phone || 'Not Found';
+        const driverEmail = email || 'Not Found';
+
         return <React.Fragment>
             <div className='full-name'>{name}</div>
             <div className='rank'>{`Driver rank: ${driverRank}`}</div>
-            <div className='phone'>{`Phone Number: ${phone || 'Not Found'}`}</div>
-            <div className='email'>{`Email: ${email || 'Not Found'}`}</div>
+            <div title={driverPhone} className='phone'>{`Phone Number: ${driverPhone}`}</div>
+            <div title={driverEmail} className='email'>{`Email: ${driverEmail}`}</div>
         </React.Fragment>
     };
 
