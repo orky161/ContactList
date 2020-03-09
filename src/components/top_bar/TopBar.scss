@@ -12,7 +12,8 @@
   .search-box {
     position: relative;
     margin-left: auto;
-    width: 20%;
+    width: 23%;
+    min-width: 200px;
 
     &:before {
       content: '';
@@ -33,6 +34,7 @@
       width: 100%;
       height: 23px;
       text-indent: 10px;
+      border: none;
     }
   }
 }

@@ -1,12 +1,8 @@
 import {driversTypes} from "../actions/Drivers";
-export enum EDriverType{
-    citizen = 'citizen',
-    professional = 'professional'
-}
 
 export interface IDriver {
     name: string
-    driverType: EDriverType
+    driverType: string,
     driverRank: number
     phone: string
     email: string

@@ -7,6 +7,6 @@ const getDrives = (state: IReducers) => state.driversReducer.drivers
 export const getVisibleDrivers = createSelector(
     [getVisibilityFilter, getDrives],
     (visibilityFilter, drivers) => {
-        return drivers.filter(driver => (driver.name).indexOf(visibilityFilter) > -1)
+        return drivers.filter(driver => (driver.name).toLowerCase().indexOf(visibilityFilter.toLocaleLowerCase()) > -1)
     }
 )

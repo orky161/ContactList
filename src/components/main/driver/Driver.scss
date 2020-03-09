@@ -56,7 +56,8 @@ $driverTypeIconSize: 40px;
   }
 
   .full-name {
-    @include driver-texts(1.1em, black);
+    @include driver-texts(1.1em, #0000008a);
+    margin-bottom: 2px;
   }
 
   .rank {

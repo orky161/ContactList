@@ -2,7 +2,7 @@ import * as React from "react";
 import {FunctionComponent, useEffect} from "react";
 import {IDriver} from "../../redux/reducers/Drivers";
 import './main.scss'
-import {Driver} from "./driver/Driver.";
+import {Driver} from "./driver/Driver";
 
 interface IMainProps {
     drivers: IDriver[]
@@ -10,7 +10,7 @@ interface IMainProps {
 }
 
 export const Main: FunctionComponent<IMainProps> = (props) => {
-    useEffect(()=>{props.fetchDrivers()}, [])
+    useEffect(()=>{props.fetchDrivers()}, []);
 
     return (
         <div className='main-container'>
@@ -19,4 +19,4 @@ export const Main: FunctionComponent<IMainProps> = (props) => {
             </div>
         </div>
     );
-}
+};

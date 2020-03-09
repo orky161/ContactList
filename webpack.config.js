@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'src');
-console.log(path.resolve(dirApp, 'assets', 'svg'))
 /**
  * Webpack Configuration
  */
